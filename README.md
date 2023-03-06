@@ -4,7 +4,7 @@
 In this Github repository, two pre-trained object detection models, Faster RCNN and YOLOv8, were evaluated on a custom dataset, collected by me. 
 I have used as pre-trained models to detect new objects to reduce the time and effort needed to train a model from scratch.
 
-At the end I get these results: YOLOv8 performed better in detecting small objects in the background, while Faster RCNN was more confident in detecting objects with bounding boxes that had approximately 100% probability for each object.
+At the end I get these results: YOLOv8 performed better in detecting small objects, while Faster RCNN was more confident in detecting objects with precise bounding boxes.
 
 ## Task description
 1. Take photos of your environment of two or more objects. (at least 100 instances between all objects)
