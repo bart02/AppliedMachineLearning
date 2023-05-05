@@ -21,3 +21,22 @@ For segmentation annotations I used [Segment Anything Model (SAM)](https://githu
 
 ![](readme_assets/seg.png)
 
+### 3. Training
+I trained Mask R-CNN model using `detectron2` and YOLOv8 using Ultralytics' toolbox.
+
+More information about models you can find in notebooks.
+
+I used Google Colab for training, because it is free and has GPU.
+
+### 4. Evaluation
+I evaluated both models based on mAP, speed and size.
+
+The mAP for object detection is the average of the AP calculated for all the classes. mAP@0.5 (or mAP50) means that it is the mAP calculated at IOU threshold 0.5.
+
+| Model | mAP50 seg | Training Speed | Inference Speed | Model Size |
+| --- | --- | --- | --- | --- |
+| YOLOv8n | 0.715 | 7.2 minutes for 52 epochs | 8.3 ms | 30 MB |
+| Mask RCNN (R_50_FPN_3x) | 0.633 | 11.5 mins for 1800 iters | 87.4 ms | 335 MB |
+
+## Conclusion
+I think, that YOLOv8 is better for segmentation, because it has better mAP and inference speed. That is because YOLOv8 is SOTA model for now, and Mask RCNN is too old.
